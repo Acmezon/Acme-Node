@@ -1,0 +1,24 @@
+{
+  "name": "app-for-SI",
+  "version" : "0.0.1",
+  "description": "Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.13.3",
+    "nedb": "1.4.0",
+    "body-parser": "1.14.1",
+    "cors": "2.7.1",
+    "ejs" : "2.3.3"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/peaceful-reef-1587"
+  },
+  "license": "MIT"
+}
