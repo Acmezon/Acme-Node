@@ -11,8 +11,10 @@ myApp.controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
 	refresh();
 
 	$scope.addContact = function() {
-		$http.post('/contacts', $scope.contact);
-		refresh();
+		if ($scope.contact.name!="" && $scope.contact.email!="" && $scope.contact.number!="") {
+			$http.post('/contacts', $scope.contact);
+			refresh();
+		}
 	};
 
 	$scope.deleteContact = function(_id) {
