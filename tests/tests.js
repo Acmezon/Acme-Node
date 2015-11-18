@@ -7,8 +7,10 @@ exports.config = {
 	specs: [
 		'e2e/TC01-loadData.js',
 		'e2e/TC02-deleteEntry.js',
+		'e2e/TC03-insertEntry.js',
 		'backend/TC01-getNotFound.js',
-		'backend/TC02-postContact.js'
+		'backend/TC02-postContact.js',
+		'backend/TC03-getContacts.js'
 	],
 	beforeLaunch: function() {
 		var dbFileName = path.join(__dirname, '../','contacts.json');
