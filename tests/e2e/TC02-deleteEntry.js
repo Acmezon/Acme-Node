@@ -9,8 +9,10 @@ describe('An entry is deleted', function () {
 		browser.waitForAngular();
 
 		var new_contacts = element.all(by.repeater('contact in contactlist'));
-		console.log("Updated: " + new_contacts.count());
-
-		expect(new_contacts.count()).toEqual(contacts.count() - 1);
+		contacts.count().then(function(contacts) {
+			contacts_new.count().then(function(new_contacts){
+				expect(new_contacts).toEqual(contacts - 1);
+			});
+		});
 	});
 });
