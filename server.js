@@ -24,6 +24,7 @@ app.get("/contacts", function(req, res) {
 		filename : dbFileName,
 		autoload : true
 	});
+	//console.log("GET REQUEST: " + req);
 	db.find({}, function (err, contacts) {
 		res.json(contacts);
 	});

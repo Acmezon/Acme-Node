@@ -11,7 +11,8 @@ myApp.controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
 	refresh();
 
 	$scope.addContact = function() {
-		if ($scope.contact.name!="" && $scope.contact.email!="" && $scope.contact.number!="") {
+		if ($scope.contact.name != "" && $scope.contact.name != undefined && $scope.contact.email != "" && $scope.contact.email != undefined
+	 	&& $scope.contact.number != "" && $scope.contact.number != undefined) {
 			$http.post('/contacts', $scope.contact);
 			refresh();
 		}
