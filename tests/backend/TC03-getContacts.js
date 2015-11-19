@@ -9,7 +9,7 @@ describe("Get contacts from the API", function (){
 			.get("/contacts")
 			.end(function(err, res){
 				//console.log("Res: " + res.body.length);
-				res.body.length.should.be.equal(3);
+				res.body.length.should.be.equal(4);
 				res.status.should.be.equal(200);
 			});
 	});
