@@ -8,6 +8,8 @@ describe("Get contacts from the API", function (){
 		request("http://localhost:5000")
 			.get("/contacts")
 			.end(function(err, res){
+				//console.log("Res: " + res.body.length);
+				res.body.length.should.be.equal(4);
 				res.status.should.be.equal(200);
 			});
 	});
